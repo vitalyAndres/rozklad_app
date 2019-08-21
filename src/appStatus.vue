@@ -24,13 +24,12 @@
     display: block;
     margin-top: 10px;" >
 	</div>
-</transition>
+</transition >
+<transition name="fade">
 	<div class="news-wrapper container" v-show="news == 'opened'">
-		     	<transition name="fade">
-
 	<app-news></app-news>
-</transition>
 	</div>
+	</transition >
 </div>
 </template>
 
@@ -92,13 +91,13 @@ export default {
 	h2 {
 		color: #28ac84;
 		font-size: 24px;
-		font-weight: 500;
+		font-weight: 600;
 	}
 </style>
 <style scoped>
 	div.padded {
-				padding: 5px 10px;
-
+		padding: 5px 10px;
+		font-weight: 600;
 	}
 	h2 {
 		transition: all .2s ease-in-out;
@@ -128,7 +127,6 @@ content: '';
     right: 3px;
     z-index: -1;
 	}
-
 	.news-wrapper {
 		background-color: #fff;
 		z-index: 1998;

@@ -137,7 +137,7 @@ export default {
 		font-size: 16px; 
 		margin: 0;
 		min-width: 70px;
-		font-weight: 500;
+		font-weight: 600;
 	}
 	.card p.name {
 		color: #636867;

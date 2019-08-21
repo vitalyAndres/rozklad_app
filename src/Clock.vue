@@ -1,11 +1,11 @@
 <template>
 <div>
 	<div class="card" style="border: none;">
-		<h3 class="clock"> {{ now }}</h3>
-	</div>
+		<h3 class="clock" style="text-align: center; color: rgb(80, 80, 80); margin-bottom: 4px; font-weight: 500; font-size: 21px;"> Розклад дзвінків</h3>
+<!-- 		<p>{{ now }}</p>  -->	</div>
 	<div class="card ring" style="margin-top: -40px;">
 		<h3 class="link"><svg style="transform: translateY(3px); margin:0px 0px 0 -5px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="#28ac84" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z"/><circle fill="#28ac84" cx="12" cy="9" r="2.5"/></svg> Головний корпус / Корпус №1 / Корпус №5</h3>
-		<p v-if="timer > 0" style="color: #292e31; margin: -5px 0 21px;"><svg style="transform: translateY(4px); margin: 0px 0px 0 -5px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#292e31" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg> {{ timer }} хв. до кінця пари</p>
+		<p class="timer" v-if="timer > 0"><svg style="transform: translateY(4px); margin: 0px 0px 0 -5px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#292e31" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg> {{ timer }} хв. до кінця пари</p>
 		<p>1 пара<span>8:30 - 9:50</span></p>
 		<div class="progressBar"><div class="progressStatus"></div></div>
 		<p>2 пара<span>10:05 - 11:25</span></p>
@@ -22,9 +22,9 @@
 	</div>
 
 
-	<div class="card ring">
-		<h3 class="link"><svg style="transform: translateY(3px); margin:0px 0px 0 -5px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="#28ac84" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z"/><circle fill="#28ac84" cx="12" cy="9" r="2.5"/></svg> Корпус №2</h3>
-		<p v-if="timerkr > 0" style="color: #292e31; margin: -5px 0 21px;"><svg style="transform: translateY(4px); margin: 0px 0px 0 -5px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#292e31" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg> {{ timerkr }} хв. до кінця пари</p>
+	<div class="card ring" style="margin-top: -15px;">
+		<h3 class="link"><svg style="transform: translateY(4px); margin:0px 0px 0 -5px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="#28ac84" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z"/><circle fill="#28ac84" cx="12" cy="9" r="2.5"/></svg> Корпус №2</h3>
+		<p class="timer" v-if="timerkr > 0" ><svg style="transform: translateY(4px); margin: 0px 0px 0 -5px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#292e31" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg> {{ timerkr }} хв. до кінця пари</p>
 		<p>1 пара<span>9:00 - 10:20</span></p>
 		<div class="progressBar"><div class="progressStatus"></div></div>
 		<p>2 пара<span>10:35 - 11:55</span></p>
@@ -192,12 +192,12 @@ export default {
 
 		// 6 кр пара скрипт
 		if (this.hours*60+this.minutes >= 17*60+10 && this.hours*60+this.minutes <= 18*60+30) {
-		prog[10].style.width = ((this.hours*60+this.minutes)-(17*60+10))/80*100 + '%';
+		prog[11].style.width = ((this.hours*60+this.minutes)-(17*60+10))/80*100 + '%';
 		this.timerkr = (((this.hours*60+this.minutes)-(17*60+10))-80)*(-1)
 		} else if (this.hours*60+this.minutes > 18*60+30) {
-			prog[10].style.width = '100%'
+			prog[11].style.width = '100%'
 		} else {
-			prog[10].style.width = '0%'
+			prog[11].style.width = '0%'
 		}
 
 
@@ -222,6 +222,11 @@ export default {
 			}
 </style>
 <style scoped>
+	.timer {
+		color: #292e31; 
+		margin: -5px 0 21px;
+		font-weight: 600;
+	}
 	.card {
 		width: 90vw;
 	}
@@ -238,8 +243,8 @@ export default {
 	}
 	.ring p {
 		font-size: 16px;
-		color: #000201;
-		font-weight: 500;
+		color: #292e31;
+		font-weight: 600;
 		position: relative;
 	}
 	.ring span {

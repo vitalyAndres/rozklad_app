@@ -5,10 +5,10 @@
 
 
 		<div class="padded">
-		<h2 style="font-weight: 500; margin-top: 9px;">Налаштування</h2>
+		<h2 style="font-weight: 500; margin-top: 9px; text-align: center; color: rgb(80, 80, 80); font-weight: 500; font-size: 21px;">Налаштування</h2>
 		</div>
-		<h3 style="margin-top: -3px; color: #000201; font-size: 16px; font-weight: 500; " >Оберіть групу:</h3>
 
+		<h3 style="margin-bottom: -15px; margin-top: 25px; color: #636867; font-size: 16px; font-weight: 600; " >Оберіть групу:</h3>
 		<p class="choose__tabs">
 			<a v-on:click.prevent="facultyChosen = 'off'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'off' }" href="" class="choose__tabs__item ">Обліково-фінансовий</a>
 			<a v-on:click.prevent="facultyChosen = 'men'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'men' }" href="" class="choose__tabs__item">Менеджменту</a>
@@ -83,6 +83,7 @@ export default {
 	    margin: 10px auto 15px;
 	    border-bottom: solid 0.5px #e9e9e7;
         box-sizing: border-box;
+        font-weight: 600;
 	}
 	h3.link {
 		margin: 10px 0;
@@ -144,30 +145,25 @@ export default {
 }
 .choose__tabs__item {
 	display: block;
+	padding-top: 12px;
+	font-weight: 600;
     flex-shrink: 0;
 	color: rgb(99, 104, 103);
 	word-break: keep-all;
 	text-decoration: none;
-	margin-right: 10px;
+	margin-right: 15px;
+	-webkit-tap-highlight-color: transparent;
+	font-size: 14px;
 }
-.choose__tabs__item:hover::after {
-	content: '';
-    display: block;
-    margin: 10px auto 0;
-    background-color: #2382da;
-    border-radius: 5px 5px 0 0;
-    width: 85%;
-    height: 2px;
-    opacity: 0.6;
-}
+
 .choose__tabs__item_active {
-	color: #2382da;
+	color: #28ac84;
 }
 .choose__tabs__item_active::after {
     content: '';
     display: block;
-    margin: 10px auto 0;
-    background-color: #2382da;
+    margin: 12px auto 0;
+    background-color: #28ac84;
     border-radius: 5px 5px 0 0;
     width: 85%;
     height: 2px;
@@ -230,6 +226,7 @@ position: fixed;
     text-decoration: none;
     color: #28ac84;
     font-weight: 600;
+    -webkit-tap-highlight-color: transparent;
 }
 .active {
 	transform: translateY(-4px);
@@ -272,9 +269,10 @@ position: fixed;
   height: 20px;
   line-height: 20px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: #484848;
   padding-left: 26px;
+
 }
 .ig-control__radio ~ label:before,
 .ig-control__radio ~ label:after {
