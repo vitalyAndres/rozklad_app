@@ -8,7 +8,7 @@
           <app-status v-show="activeHref !== 'null' && activeHref !== null && activeHref !== ''" v-on:weekChanged="activeWeek = $event" ></app-status>
           <div v-if="activeHref == 'null' || activeHref == null || activeHref == ''" class="ifNull">
             <img src="static/hello.svg">
-            <p>Будь-ласка, оберіть вашу <br /> групу в розділі "Інше" </p>
+            <p style="font-weight: 600;">Будь-ласка, оберіть вашу <br /> групу в розділі "Налаштування" </p>
           </div>
           <div id="hider" style="margin-top: -24px;">
         <transition name="fade">

@@ -11,18 +11,18 @@
 	</div>
 	<transition name="fade">
 	<div class="news-button" v-if="news == 'closed'" v-on:click="news = 'opened', hideSched()">
-		<img src="static/news.svg" width="30px;" style="z-index: 1;
+		<img src="static/news.svg" width="26px;" style="z-index: 1;
     margin: auto;
     display: block;
-    margin-top: 10px;" >
+    margin-top: 12px;" >
 	</div>
 </transition>
      	<transition name="fade">
 
 	<div class="news-button news-button--active" v-if="news == 'opened'" v-on:click="news = 'closed', showSched()">
-		<img src="static/news-active.svg" width="30px;" style="z-index: 1; margin: auto;
+		<img src="static/news-active.svg" width="26px;" style="z-index: 1; margin: auto;
     display: block;
-    margin-top: 10px;" >
+    margin-top: 12px;" >
 	</div>
 </transition >
 <transition name="fade">
