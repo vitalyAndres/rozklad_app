@@ -1,6 +1,6 @@
 <template>
 <div>
-	<div class="card" style="border: none;">
+	<div class="card" style="border: none!important;">
 		<h3 class="clock" style="text-align: center; color: rgb(80, 80, 80); margin-bottom: 4px; font-weight: 500; font-size: 21px;"> Розклад дзвінків</h3>
 <!-- 		<p>{{ now }}</p>  -->	</div>
 	<div class="card ring" style="margin-top: -40px;">

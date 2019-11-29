@@ -1,20 +1,20 @@
 {
-  "name": "Розклад МНАУ",
-  "short_name": "rozklad",
+  "name": "Розклад Миколаївського НАУ",
+  "short_name": "Розклад",
   "icons": [
     {
-      "src": "/static/img/icons/android-chrome-192x192.png",
+      "src": "https://rozklad.mnau.edu.ua/app/static/img/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/static/img/icons/android-chrome-512x512.png",
+      "src": "https://rozklad.mnau.edu.ua/app/static/img/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/pwa/index.html",
+  "start_url": "https://rozklad.mnau.edu.ua/app/index.html",
   "display": "standalone",
-  "background_color": "#fff",
-  "theme_color": "#28ac84"
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
 }
