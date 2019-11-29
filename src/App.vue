@@ -259,4 +259,13 @@ export default {
 .toast p {
     background-color: #1d1d1d!important;
 }
+.dark .tip_card h4 {
+  color: #e8e8e8!important;
+}
+.dark .tip_card p {
+  color: #e8e8e8!important;
+}
+.dark .tip_card {
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
 </style>
