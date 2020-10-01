@@ -109,7 +109,7 @@ export default {
 	}
 	.news-button {
 	position: absolute;
-    top: 25px;
+    top: 17px;
     right: 5vw;
     width: 50px;
     height: 50px;

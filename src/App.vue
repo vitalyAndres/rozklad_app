@@ -95,8 +95,10 @@ export default {
 
     if(currentTheme =='dark') {
         document.getElementsByTagName('html')[0].classList.add("dark");
+        StatusBar.backgroundColorByHexString("#1d1d1d");
       } else {
         document.getElementsByTagName('html')[0].classList.remove("dark");
+        StatusBar.backgroundColorByHexString("#ffffff");
       }
   }
 }

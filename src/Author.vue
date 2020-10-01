@@ -4,9 +4,17 @@
 		<p style="color: rgb(80, 80, 80); font-size: 16px; font-weight: 600">Створено з <span style="color: red;">❤</span> за допомогою Vue.js, Axios та Apache Cordova</p>
 	</div>
 	<div class="card" style="margin-top: -20px; ">
-		<a target="_blank" href="https://www.instagram.com/rozklad.mnau/">
+		<a target="_blank" href="https://uadd.me/endres">
 			
 			<svg class="social__like__icon" xmlns="http://www.w3.org/2000/svg" fill="red" width="25" height="25" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+			<p style="color: #000201; font-size: 16px;  padding-left: 15px;">Сторінка автора додатку<br />
+				<span style="color: #636867; font-size: 14px; ">Звертайтесь щодо співпраці</span>
+			</p>
+		</a>
+	</div>
+	<div class="card" style="margin-top: -20px; ">
+		<a target="_blank" href="https://www.instagram.com/rozklad.mnau/">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill="#636867" d="M20.947,8.305c-0.011-0.757-0.151-1.508-0.419-2.216c-0.469-1.209-1.424-2.165-2.633-2.633 c-0.699-0.263-1.438-0.404-2.186-0.42C14.747,2.993,14.442,2.981,12,2.981s-2.755,0-3.71,0.055 c-0.747,0.016-1.486,0.157-2.185,0.42C4.896,3.924,3.94,4.88,3.472,6.089C3.209,6.788,3.067,7.527,3.053,8.274 c-0.043,0.963-0.056,1.268-0.056,3.71s0,2.754,0.056,3.71c0.015,0.748,0.156,1.486,0.419,2.187 c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45c0.963,0.043,1.268,0.056,3.71,0.056s2.755,0,3.71-0.056 c0.747-0.015,1.486-0.156,2.186-0.419c1.209-0.469,2.164-1.425,2.633-2.633c0.263-0.7,0.404-1.438,0.419-2.187 c0.043-0.962,0.056-1.267,0.056-3.71C21.003,9.572,21.003,9.262,20.947,8.305z M11.994,16.602c-2.554,0-4.623-2.069-4.623-4.623 s2.069-4.623,4.623-4.623c2.552,0,4.623,2.069,4.623,4.623S14.546,16.602,11.994,16.602z M16.801,8.263 c-0.597,0-1.078-0.482-1.078-1.078s0.481-1.078,1.078-1.078c0.595,0,1.077,0.482,1.077,1.078S17.396,8.263,16.801,8.263z"/><circle xmlns="http://www.w3.org/2000/svg" fill="#636867" cx="11.994" cy="11.979" r="3.003"/></svg>
 			<p style="color: #000201; font-size: 16px;  padding-left: 15px;">Сторінка проєкту в Instagram<br />
 				<span style="color: #636867; font-size: 14px; ">Подякуйте лайком та підпискою</span>
 			</p>
@@ -51,7 +59,7 @@
 <div style="display: flex; flex-direction: row; align-items: center; text-decoration: none;" >
 <svg aria-hidden="true" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" width="23px" height="23px" viewBox="0 0 512 512"><path fill="#636867" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
 <p style="color: #000201; font-size: 16px;  padding-left: 15px;">Розклад МНАУ<br />
-	<span style="color: #636867; font-size: 14px; ">1.3.3</span>
+	<span style="color: #636867; font-size: 14px; ">1.3.4</span>
 </p>
 </div>
 </div>

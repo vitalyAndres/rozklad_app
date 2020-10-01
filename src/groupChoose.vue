@@ -5,7 +5,7 @@
     <div class="padded">
       <h2 style="font-weight: 500; margin-top: 9px; text-align: center; color: rgb(80, 80, 80); font-weight: 500; font-size: 21px;">Налаштування</h2>
     </div>
-    <h3 style="margin-bottom: -15px; margin-top: 25px; color: #636867; font-size: 16px; font-weight: 600; " >Оберіть групу:</h3>
+    <h3 style="margin-bottom: -10px; margin-top: 25px; color: #636867; font-size: 16px; font-weight: 600; " >Оберіть групу:</h3>
     <p class="choose__tabs">
       <a v-on:click.prevent="facultyChosen = 'off'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'off' }" href="" class="choose__tabs__item ">Обліково-фінансовий</a>
       <a v-on:click.prevent="facultyChosen = 'men'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'men' }" href="" class="choose__tabs__item">Менеджменту</a>
@@ -13,6 +13,7 @@
       <a v-on:click.prevent="facultyChosen = 'agro'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'agro' }" href="" class="choose__tabs__item">Агротехнологій</a>
       <a v-on:click.prevent="facultyChosen = 'tvppt'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'tvppt' }" href="" class="choose__tabs__item">ТВППТСБ</a>
       <a v-on:click.prevent="facultyChosen = 'tec'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'tec' }" href="" class="choose__tabs__item">ТЕК МНАУ</a>
+      <!-- <a v-on:click.prevent="facultyChosen = 'teacher'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'teacher' }" href="" class="choose__tabs__item">Викладачі</a> -->
     </p>
     <div class="tabs">
       <div class="tab">
@@ -48,7 +49,7 @@
           </div>
         </div>
       </div>
-      <div class="tab" v-show="facultyChosen !== 'tec'">
+      <div class="tab">
         <input type="checkbox" id="chck4">
         <label class="tab-label" for="chck4">4 курс</label>
         <div class="tab-content">
@@ -134,8 +135,12 @@ export default {
     changeTheme: function() {
       if(this.themeChosen=='dark') {
         document.getElementsByTagName('html')[0].classList.add("dark");
+        StatusBar.backgroundColorByHexString("#1d1d1d");
+        StatusBar.styleLightContent();
       } else {
         document.getElementsByTagName('html')[0].classList.remove("dark");
+        StatusBar.backgroundColorByHexString("#ffffff");
+        StatusBar.styleDefault();
       }
     },
     reloadPage: function(){
