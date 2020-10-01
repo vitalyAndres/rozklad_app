@@ -4,7 +4,7 @@
 		<p style="color: rgb(80, 80, 80); font-size: 16px; font-weight: 600">Створено з <span style="color: red;">❤</span> за допомогою Vue.js, Axios та Apache Cordova</p>
 	</div>
 	<div class="card" style="margin-top: -20px; ">
-		<a target="_blank" href="https://uadd.me/endres">
+		<a target="_blank" href="https://uadd.me/endres?utm=rozklad_app">
 			
 			<svg class="social__like__icon" xmlns="http://www.w3.org/2000/svg" fill="red" width="25" height="25" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
 			<p style="color: #000201; font-size: 16px;  padding-left: 15px;">Сторінка автора додатку<br />
@@ -59,7 +59,7 @@
 <div style="display: flex; flex-direction: row; align-items: center; text-decoration: none;" >
 <svg aria-hidden="true" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" width="23px" height="23px" viewBox="0 0 512 512"><path fill="#636867" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
 <p style="color: #000201; font-size: 16px;  padding-left: 15px;">Розклад МНАУ<br />
-	<span style="color: #636867; font-size: 14px; ">1.3.4</span>
+	<span style="color: #636867; font-size: 14px; ">1.4.0</span>
 </p>
 </div>
 </div>

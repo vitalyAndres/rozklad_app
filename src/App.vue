@@ -105,6 +105,9 @@ export default {
 </script>
 
 <style>
+  * {
+    -webkit-tap-highlight-color: transparent;
+}
   .container {
     width: 90vw;
     margin: 0px auto;

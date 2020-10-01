@@ -13,21 +13,23 @@
       <a v-on:click.prevent="facultyChosen = 'agro'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'agro' }" href="" class="choose__tabs__item">Агротехнологій</a>
       <a v-on:click.prevent="facultyChosen = 'tvppt'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'tvppt' }" href="" class="choose__tabs__item">ТВППТСБ</a>
       <a v-on:click.prevent="facultyChosen = 'tec'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'tec' }" href="" class="choose__tabs__item">ТЕК МНАУ</a>
-      <!-- <a v-on:click.prevent="facultyChosen = 'teacher'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'teacher' }" href="" class="choose__tabs__item">Викладачі</a> -->
+      <a v-on:click.prevent="facultyChosen = 'teacher'" v-bind:class="{ choose__tabs__item_active: facultyChosen == 'teacher' }" href="" class="choose__tabs__item">Викладачі</a>
+       
     </p>
     <div class="tabs">
-      <div class="tab">
+      
+
+      <div class="tab" v-show="facultyChosen !== 'teacher'">
         <input type="checkbox" id="chck1">
         <label class="tab-label" for="chck1">1 курс</label>
         <div class="tab-content">
-          
-          <div  v-show="group.faculty == facultyChosen && group.course == '1'" v-for="(group, key) in linkSheet.linkSheet" class="ig-control" @click="groupHref = group.href; changeHref(); groupChosen = key; changeGroup(); showToast = 1; " >
+            <div  v-show="group.faculty == facultyChosen && group.course == '1'" v-for="(group, key) in linkSheet.linkSheet" class="ig-control" @click="groupHref = group.href; changeHref(); groupChosen = key; changeGroup(); showToast = 1; " >
             <input type="radio" v-bind:id="key" @click="" class="ig-control__radio" v-bind:value="group.href" v-model="groupHref">
             <label v-bind:for="key">{{ group.group }}</label>
           </div>
         </div>
       </div>
-      <div class="tab">
+      <div class="tab" v-show="facultyChosen !== 'teacher'">
         <input type="checkbox" id="chck2">
         <label class="tab-label" for="chck2">2 курс</label>
         <div class="tab-content">
@@ -38,7 +40,7 @@
           </div>
         </div>
       </div>
-      <div class="tab">
+      <div class="tab" v-show="facultyChosen !== 'teacher'">
         <input type="checkbox" id="chck3">
         <label class="tab-label" for="chck3">3 курс</label>
         <div class="tab-content">
@@ -49,7 +51,7 @@
           </div>
         </div>
       </div>
-      <div class="tab">
+      <div class="tab"  v-show="facultyChosen !== 'teacher'">
         <input type="checkbox" id="chck4">
         <label class="tab-label" for="chck4">4 курс</label>
         <div class="tab-content">
@@ -60,7 +62,7 @@
           </div>
         </div>
       </div>
-      <div class="tab" v-show="facultyChosen !== 'tec'">
+      <div class="tab" v-show="facultyChosen !== 'tec' && facultyChosen !== 'teacher'">
         <input type="checkbox" id="chck5">
         <label class="tab-label" for="chck5">5 курс</label>
         <div class="tab-content">
@@ -71,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div class="tab" style="border-radius: 0 0 5px 5px; border: none;" v-show="facultyChosen !== 'tec'">
+      <div class="tab" style="border-radius: 0 0 5px 5px; border: none;" v-show="facultyChosen !== 'tec' && facultyChosen !== 'teacher'">
         <input type="checkbox" id="chck6">
         <label class="tab-label" for="chck6">6 курc</label>
         <div class="tab-content">
@@ -81,6 +83,85 @@
           </div>
         </div>
       </div>
+
+
+      <!-- Teacher -->
+      <div class="tab" v-show="facultyChosen == 'teacher'">
+        <input type="checkbox" id="chck7">
+        <label class="tab-label" for="chck7">Обліково-фінансовий факультет</label>
+        <div class="tab-content">
+            <div  v-show="group.faculty == facultyChosen && group.course == 'off'" v-for="(group, key) in linkSheet.linkSheet" class="ig-control" @click="groupHref = group.href; changeHref(); groupChosen = key; changeGroup(); showToast = 1; " >
+            <input type="radio" v-bind:id="key" @click="" class="ig-control__radio" v-bind:value="group.href" v-model="groupHref">
+            <label v-bind:for="key">{{ group.group }}</label>
+          </div>
+        </div>
+      </div>
+      <div class="tab" v-show="facultyChosen == 'teacher'">
+        <input type="checkbox" id="chck8">
+        <label class="tab-label" for="chck8">Факультет менеджменту</label>
+        <div class="tab-content">
+            <div  v-show="group.faculty == facultyChosen && group.course == 'men'" v-for="(group, key) in linkSheet.linkSheet" class="ig-control" @click="groupHref = group.href; changeHref(); groupChosen = key; changeGroup(); showToast = 1; " >
+            <input type="radio" v-bind:id="key" @click="" class="ig-control__radio" v-bind:value="group.href" v-model="groupHref">
+            <label v-bind:for="key">{{ group.group }}</label>
+          </div>
+        </div>
+      </div>
+      <div class="tab" v-show="facultyChosen == 'teacher'">
+        <input type="checkbox" id="chck9">
+        <label class="tab-label" for="chck9">Факультет агротехнологій</label>
+        <div class="tab-content">
+            <div  v-show="group.faculty == facultyChosen && group.course == 'agro'" v-for="(group, key) in linkSheet.linkSheet" class="ig-control" @click="groupHref = group.href; changeHref(); groupChosen = key; changeGroup(); showToast = 1; " >
+            <input type="radio" v-bind:id="key" @click="" class="ig-control__radio" v-bind:value="group.href" v-model="groupHref">
+            <label v-bind:for="key">{{ group.group }}</label>
+          </div>
+        </div>
+      </div>
+      <div class="tab" v-show="facultyChosen == 'teacher'">
+        <input type="checkbox" id="chck10">
+        <label class="tab-label" for="chck10">Факультет ТВППТСБ</label>
+        <div class="tab-content">
+            <div  v-show="group.faculty == facultyChosen && group.course == 'tvpptsb'" v-for="(group, key) in linkSheet.linkSheet" class="ig-control" @click="groupHref = group.href; changeHref(); groupChosen = key; changeGroup(); showToast = 1; " >
+            <input type="radio" v-bind:id="key" @click="" class="ig-control__radio" v-bind:value="group.href" v-model="groupHref">
+            <label v-bind:for="key">{{ group.group }}</label>
+          </div>
+        </div>
+      </div>
+      <div class="tab" v-show="facultyChosen == 'teacher'">
+        <input type="checkbox" id="chck11">
+        <label class="tab-label" for="chck11">Інженерно-енергетичний факультет</label>
+        <div class="tab-content">
+            <div  v-show="group.faculty == facultyChosen && group.course == 'ief'" v-for="(group, key) in linkSheet.linkSheet" class="ig-control" @click="groupHref = group.href; changeHref(); groupChosen = key; changeGroup(); showToast = 1; " >
+            <input type="radio" v-bind:id="key" @click="" class="ig-control__radio" v-bind:value="group.href" v-model="groupHref">
+            <label v-bind:for="key">{{ group.group }}</label>
+          </div>
+        </div>
+      </div>
+      <div class="tab" v-show="facultyChosen == 'teacher'">
+        <input type="checkbox" id="chck12">
+        <label class="tab-label" for="chck12">Факультет культури і виховання</label>
+        <div class="tab-content">
+            <div  v-show="group.faculty == facultyChosen && group.course == 'culture'" v-for="(group, key) in linkSheet.linkSheet" class="ig-control" @click="groupHref = group.href; changeHref(); groupChosen = key; changeGroup(); showToast = 1; " >
+            <input type="radio" v-bind:id="key" @click="" class="ig-control__radio" v-bind:value="group.href" v-model="groupHref">
+            <label v-bind:for="key">{{ group.group }}</label>
+          </div>
+        </div>
+      </div>
+      <div class="tab" style="border-radius: 0 0 5px 5px; border: none;" v-show="facultyChosen == 'teacher'">
+        <input type="checkbox" id="chck13">
+        <label class="tab-label" for="chck13">ТЕК МНАУ</label>
+        <div class="tab-content">
+            <div  v-show="group.faculty == facultyChosen && group.course == 'tec'" v-for="(group, key) in linkSheet.linkSheet" class="ig-control" @click="groupHref = group.href; changeHref(); groupChosen = key; changeGroup(); showToast = 1; " >
+            <input type="radio" v-bind:id="key" @click="" class="ig-control__radio" v-bind:value="group.href" v-model="groupHref">
+            <label v-bind:for="key">{{ group.group }}</label>
+          </div>
+        </div>
+      </div>
+    
+
+
+
+
+
     </div>
     <!-- <div  v-show="group.faculty == facultyChosen" v-for="(group, key) in linkSheet.linkSheet" class="ig-control" @click="groupHref = group.href; changeHref();" >
         <input type="radio" v-bind:id="key" @click="groupChosen = key; changeGroup(); showToast = 1; " class="ig-control__radio" v-bind:value="group.href" v-model="groupHref">
