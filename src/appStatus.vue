@@ -37,12 +37,15 @@
 export default {
 	data () {
 		return {
-			activeWeek: 'numer',
-			news: 'closed'
+				activeWeek: 'numer',
+				weeklogic: '0',
+				news: 'closed'
 				}
 			},
 	mounted: function() {
+		this.getLinkSheet(),
 		this.weekNumberLogic()
+		
 	},
 	methods: {
 		hideSched: function() {
@@ -60,6 +63,15 @@ export default {
 		}
 			this.$emit('weekChanged', this.activeWeek)
 		},
+		getLinkSheet: function() {
+	      axios.get('https://rozklad.mnau.edu.ua/db/weeklogic.json').then((data)=>{
+	      this.weeklogic = data.data;
+	      var myJSON = JSON.stringify(this.weeklogic);
+	      localStorage.setItem("weeklogic", myJSON);
+	      var text = localStorage.getItem("weeklogic");        // retrieving data
+	      this.weeklogic = JSON.parse(text).weeklogic;
+	  });
+    },
 		weekNumberLogic: function(){
 
 		Date.prototype.getWeek = function() {
@@ -76,10 +88,24 @@ export default {
 		var currentDateTime = new Date();
 		var weekNumber = currentDateTime.getWeek()
 
-		if (weekNumber%2 == 0) {
-			this.activeWeek ='numer';
+		var text = localStorage.getItem("weeklogic");        // retrieving data
+	    this.weeklogic = JSON.parse(text).weeklogic;
+		console.log(this.weeklogic)
+		
+		if (this.weeklogic == "0") {
+			if (weekNumber%2 == 0) {
+				this.activeWeek ='numer';
+			} else {
+				console.log(this.weeklogic)
+				this.activeWeek ='denumer';
+			}
 		} else {
-			this.activeWeek ='denumer';
+			if (weekNumber%2 == 0) {
+				this.activeWeek ='denumer';
+			} else {
+				console.log(this.weeklogic)
+				this.activeWeek ='numer';
+			}
 		}
 			this.$emit('weekChanged', this.activeWeek)
 		}
